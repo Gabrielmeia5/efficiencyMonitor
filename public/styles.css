@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  height: 20%;
+  background-color: #004aad;
+  user-select: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-localization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+  margin-right: 3em;
+  font-size: 1.3rem;
+}
+
+.tittle {
+  font-size: 2.5rem;
+  margin-left: 1.5em;
+}
+
+#main_container {
+  display: grid;
+  grid-template-columns: auto 80%;
+  height: 80%;
+  width: 100%;
+}
+
+#container_info {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  margin-top: 3em;
+}
+
+.subTitle {
+  text-wrap: nowrap;
+  font-size: 1.5rem;
+  margin-left: 1.3em;
+}
+
+.data {
+  margin-top: 1em;
+  margin-left: 2em;
+  border-left: 1px solid black;
+  padding-left: 1em;
+}
+
+.data p,
+.data label {
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+.data p:last-child {
+  margin-bottom: 0;
+}
+
+.data p span {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+
+#scope_graphic {
+  background-color: none;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-top: 1em;
+
+  padding: 0.3em 2em;
+  background-color: #004aad;
+  color: white;
+  border: none;
+}
+
+#container_graphic {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.chart {
+  width: 90%;
+  height: 90%;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+@media (max-height: 768px) {
+  #container_info {
+    padding: 1em;
+    margin-top: 1em;
+  }
+
+  .subTitle {
+    font-size: 1.3rem;
+  }
+
+  .data {
+    margin-top: 1em;
+  }
+
+  .data p,
+  .data label {
+    font-size: 1rem;
+    margin-bottom: 0.8em;
+  }
+
+  .data p span {
+    font-size: 0.9rem;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  #main_container {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 80%;
+  }
+  body {
+    width: 100vw;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+}

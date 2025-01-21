@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura e Eficiência</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <body>
+
+      <header id="header">
+        <h1 class="tittle">MONITOR DE EFICIÊNCIA</h1>
+        <div class="container-localization">
+          <i class="fa-solid fa-location-dot"></i><p id="localization">Patos de
+            Minas</p>
+        </div>
+      </header>
+
+      <main id="main_container">
+        <section id="container_info">
+          <h2 class="subTitle">Ultimos dados:</h2>
+          <div class="data">
+            <p>Data e Hora:<br><span id="data-time">Carregando...</span></p>
+            <p>Temperatura:<br><span id="temperature">Carregando...</span>
+              <span>°C</span></p>
+            <p>Eficiência:<br><span id="efficiency">Carregando...</span>
+              <span>%</span></p>
+            <p
+              title="Baseado no périodo de visualização do gráfico">Status:<br><span
+                id="relatory">Perda média de <span
+                  id="mediaEfficiency">24</span>% na eficiência</span></p>
+            <label for="scope_graphic">Período de Visualização:</label><br>
+            <select name="scope graphic" id="scope_graphic">
+              <option title="Ultimos 20 dados" value="20">Last/10min</option>
+              <option title="Ultimos 60 dados" value="60">Last/30min</option>
+              <option title="Ultimos 120 dados" value="120">Last/1h</option>
+              <option title="Ultimos 2880 dados" value="2880">Last/24h</option>
+              <option title="Todos os dados" value=" ">All Time</option>
+            </select>
+          </div>
+        </section>
+
+        <section id="container_graphic">
+          <div class="chart">
+            <canvas id="myChart"></canvas>
+          </div>
+        </section>
+      </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="scripts.js"></script>
+
+    </body>
+  </html>
